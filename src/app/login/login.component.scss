@@ -150,13 +150,24 @@
     height: 50px !important;
   }
 
-  @media only screen and (max-width: 600px) { 
-    .child_content { 
-      margin: 0;
-      padding: 0;
-      height: 80vh !important;
+  @media screen and (max-width: 600px) { 
 
+    .component-main {
+      margin: auto 0;
+
+      .child_content { 
+        padding: 0;
+        height: 80vh !important;
+  
+        .left_side { 
+          display: none;
+        }
+      }
     }
+    
+    
+  
+
     .child_div_7{
       display: flex;
     }
