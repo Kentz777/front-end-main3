@@ -29,7 +29,7 @@ import { CounterComponent } from './counter/counter.component';
     CompleteDialogComponent,
     DashboardComponent,
     BodyComponent,
-    CounterComponent
+    CounterComponent,
   ],
   imports: [
     CommonModule,
