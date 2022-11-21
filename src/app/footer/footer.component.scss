@@ -158,6 +158,11 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+@media only screen and (max-width: 600px) {
+  .footer-section{ 
+    padding-right: 30px !important; 
+  }
+}
 
 @media only screen and (max-width: 1079px) { 
   .footer-section { 

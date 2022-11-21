@@ -7,12 +7,12 @@ html {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%; 
 
-    .app-content{ 
+    .app-content { 
         min-height: 100%;
         flex: auto 0 0 ;
     }
-
     .footer-container {
         margin-top: auto;
     }
@@ -20,11 +20,28 @@ html {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  
+    .app-container { 
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+        .app-content{ 
+            min-height: 100%;
+            flex: 1 auto 1;
+        }
+    
+        .footer-container {
+            margin-top: 100%;
+            flex: 1 2 1;        
+        }
+    }
+    
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  
+@media only screen and (max-width: 600px) {
+    .app-content { 
+        padding-bottom: 250px;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
