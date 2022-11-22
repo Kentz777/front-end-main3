@@ -1,3 +1,97 @@
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// updated css 
+.convert-container { 
+  @include flexCenter();
+  box-sizing: border-box;
+  padding: 3rem;
+  color: #fff;
+  max-width: 730px;
+  margin: 2% auto;
+
+  .mat-progress-bar {
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .convert-container-2 {
+    .title-container{ 
+      @include flexCenter();
+      flex-direction: row;
+      padding-right: 5rem; 
+      padding-bottom: 1.5rem;
+      
+      img { 
+        transform: scale(1); 
+      }
+
+      // text 
+      p {
+        margin: auto; 
+        text-align: center;
+        font-size: 2.3rem;
+      }
+    }
+
+    .btns-convert { 
+      @include flexCenter();
+      padding-top: 2rem;
+    }
+  }
+
+  .drop-file-container { 
+    @include flexCenter(); 
+    background-color: #312D2D;
+    height: 322px;
+    width: 730px;
+    max-height: 100%;
+    border-radius: 15px;
+    margin: auto;
+
+
+    .drag-text {
+      font-size: 1.5rem;
+      padding-bottom: 1.6rem;
+    }
+
+    .file-input { 
+      @include flexCenter(); 
+      padding-bottom: 2.3rem;
+
+      input { 
+        padding: 0 auto;
+        background-color: #F37C0E;
+      }
+    }
+
+    .lower-text {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bfiles_child_container{
   height: 322px;
   width: 730px;

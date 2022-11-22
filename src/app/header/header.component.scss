@@ -4,16 +4,17 @@
     background: #333430;
     //float: right;
     display: block;
+    z-index: 9999;
 }
 
 .jplogo{
     height: 100%;
-    z-index: 999;
-
 }
 .header-content{
     height: 100%;
-    padding: 15px;
+    padding: 1rem;
+    padding-right: 2.5rem;
+    z-index: 9999; 
 }
 
 table{
@@ -39,4 +40,3 @@ a{
 
     color: #FFFFFF;
 }
-
