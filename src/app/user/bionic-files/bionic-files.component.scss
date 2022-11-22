@@ -1,10 +1,12 @@
-.bfiles_child_container{
+.bfiles_child_container:only-child{
     height: 322px;
     width: 730px;
     left: 27%;
     margin-top: 3%;
     position: relative;
     color: white;
+    padding-bottom: 50%;
+
 }
 
 .child_content{

@@ -60,12 +60,7 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 660px){ 
-    .container  { 
-        height: 100%;
-        padding-bottom: 100px;
-    }
-}
+
 @media only screen and (max-width: 990px){ 
     .dashboard-container { 
         margin: 4rem 0;
@@ -77,8 +72,22 @@
     }
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 550px) {
+    .dashboard-container { 
+        margin-bottom: 30%;
+    }
+}
 
+@media only screen and (max-width: 375px){
+    .card-box {
+        padding-left: 20px;
+
+        .inner{ 
+            padding-left: 0;
+        }
+    }
+    
+    
 }
 
     

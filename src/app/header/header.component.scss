@@ -1,19 +1,19 @@
-.header-component{
+.header-component {
     height: 70px;
     width: 100%;
     background: #333430;
     //float: right;
     display: block;
 }
+
 .jplogo{
     height: 100%;
+    z-index: 999;
+
 }
 .header-content{
     height: 100%;
-    //float: right;
-    // margin-right: 15%;
     padding: 15px;
-    
 }
 
 table{
