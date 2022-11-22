@@ -37,6 +37,7 @@
         margin: auto; 
         text-align: center;
         font-size: 2.3rem;
+        transition: all 1s ease-in;
       }
     }
 
@@ -44,6 +45,7 @@
       @include flexCenter();
       padding-top: 2rem;
     }
+   
   }
 
   .drop-file-container { 
@@ -75,6 +77,126 @@
       text-align: center;
       font-size: 1rem;
     }
+
+   
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .convert-container {
+    
+    .convert-container-2 {
+      
+      .title-container { 
+
+        img { 
+          transform: scale(0.7);
+          padding-right: 10px;
+        }
+        
+        p { 
+          font-size: 1.7rem;
+          line-height: 1.3;
+        }  
+      }  
+
+      .btns-convert{
+      
+        button { 
+          width: 100%;
+        }
+      }
+    }
+
+    .drop-file-container{
+        width: 100%;
+    }
+
+    .lower-text {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 527px) {
+  .convert-container {
+
+    .convert-container-2 {
+
+      .title-container {
+        display: block;
+        padding-right: 0; 
+        padding-bottom: 0.5rem;
+
+        img { 
+        }
+
+        p{
+          text-align: left;
+          line-height: 1.2;
+          padding-left: 20px;
+          font-size: 0.9rem;
+        }
+
+        
+      }
+
+      .btns-convert{
+      
+        button { 
+          width: 80%;
+        }
+      }
+    }
+    
+    .drop-file-container{
+      .drop-container {
+        padding: 0 15px;
+        
+        .drag-text {
+          text-align: left;        
+        }
+
+        .lower-text { 
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .convert-container {
+    .convert-container-2 {
+
+      .title-container {
+        display: block;
+        padding: auto 0 0.5rem 15px;
+
+
+        p{
+          text-align: left;
+          font-size: 1.3rem;
+          padding-left: 20px;
+        }
+      }
+  
+    }
+    
+    .drop-file-container{
+      width: 85%;
+
+      .drop-container {
+        width: 90%;
+        
+        .file-input input{
+          margin: 0 10px;
+          width: 170px;
+        }
+      }
+    }
   }
 }
 
@@ -91,6 +213,9 @@
 
 
 
+
+
+// old code 
 
 .bfiles_child_container{
   height: 322px;
