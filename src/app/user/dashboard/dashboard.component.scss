@@ -11,6 +11,7 @@
     border: 2px solid #F37C0E;
     background: rgba(255, 255, 251, 0.24);
 }
+
 .card-box:hover {
     text-decoration: none;
     color: black;
@@ -78,14 +79,27 @@
     }
 }
 
-@media only screen and (max-width: 375px){
-    .card-box {
-        padding-left: 20px;
+@media only screen and (max-width: 376px){
+    .container { 
+        .dashboard-container {
+            div {
+                .card-box {
+                    padding: 80px 25px;
+                    margin-top: 1.5rem;
 
-        .inner{ 
-            padding-left: 0;
+                    .inner{ 
+                        padding-left: 0;
+                        
+                        h3 { 
+                            font-size: 25px;
+                        }
+                    }
+                } 
+            }
+                 
         }
     }
+
     
     
 }
