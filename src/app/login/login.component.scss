@@ -225,6 +225,30 @@
   
   }
 
+  @media only screen and (max-width: 321px){
+    .component-main {
+      
+      .component-login {
+
+        .form-box {
+          padding: 10px 20px;
+          height: 500px;
+          width: 300px;
+
+          .header-text {
+            
+          }
+        }
+
+        .d-flex { 
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
   //footer
 
 

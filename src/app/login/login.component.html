@@ -12,34 +12,31 @@
     </div>
 
     <div class="component-login child_div_7">
-   
         <div class="form-box container">
           <div class="header-text">
             Get Started
           </div>
-            <input placeholder="Email Address" type="text" [formControl]="email"> 
-            <input class="inp_pass" placeholder="Password" matInput [type]="hide ? 'password' : 'text'" [formControl]="password"> 
-              <button class="btn_eye"
-                mat-icon-button
-                matSuffix
-                (click)="hide = !hide"
-                [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hide"
-            > 
-              <mat-icon class="btn_eye">{{ hide ? "visibility_off" : "visibility" }}</mat-icon>  Show Password
-            </button>
+          <input placeholder="Email Address" type="text" [formControl]="email"> 
+          <input class="inp_pass" placeholder="Password" matInput [type]="hide ? 'password' : 'text'" [formControl]="password"> 
+            <button class="btn_eye"
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+          > 
+            <mat-icon class="btn_eye">{{ hide ? "visibility_off" : "visibility" }}</mat-icon>  Show Password
+          </button>
 
             
 
-            <div class="d-flex justify-content-center">
-              <button class="btn_login" mat-flat-button color="warn" (click)="login()">Login</button>
-          
-            </div>
-            <div class="link">
-              <a routerLink="./register">Don't have an account?</a>
+          <div class="d-flex justify-content-center">
+            <button class="btn_login" mat-flat-button color="warn" (click)="login()">Login</button>
           </div>
+          <div class="link">
+            <a routerLink="./register">Don't have an account?</a>
         </div>
-    
+      </div>
     </div>
   </div>
 </div>

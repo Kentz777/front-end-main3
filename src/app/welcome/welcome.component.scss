@@ -98,6 +98,7 @@ body{
     background-position: center;
     height: 100vh;
     min-height: 100%;
+    width: 100%;
   }
   
   
@@ -570,7 +571,7 @@ body{
   
   }
   
-  @media (max-width:991px){
+  @media only screen and (max-width:991px){
     
     section{
         padding:7.5rem 6% 2.5rem;
@@ -583,7 +584,7 @@ body{
     }
   }
   
-  @media (max-width:768px){
+  @media (max-width:769px){
   
     header label{
         visibility: visible;
@@ -622,7 +623,7 @@ body{
     .home{
         display: flex;
         flex-flow: column-reverse;
-        height: 1005vh;
+        height: 100vh;
 
         .content{ 
           margin-bottom: 100%;
