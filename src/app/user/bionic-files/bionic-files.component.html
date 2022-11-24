@@ -1,48 +1,91 @@
-<div class="bfiles_container">
-
-    <div class="bfiles_child_container">
-        <div>
-            <div class="child_div_12" >
-                <table class="tb_title inter_font_b">
-                  <tr>
-                    <td>
-                      <img
-                        class="img_folder"
-                        src="../../../assets/images/folder_img.svg"
-                        alt=""
-                      />
-                    </td>
-                    <td>
-                      <p class="fold_title">LIST OF CONVERTED FILES</p>
-                    </td>
-                  </tr>
-                </table>
-        </div>
-        <div class="child_content">
-            <div class="child_div_2">
-                <table>
-                    <thead style="position:sticky; top: 0;">
-                      <tr class="tr">
-                        <th scope="col">File Name</th>
-                        <!-- <th scope="col">Date Modified</th>
-                        <th scope="col">Type</th> -->
-                        <th scope="col">Link</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                     
-                      <tr class="tr" *ngFor="let f of files">
-                        <td data-label="File Name">{{f.filename}}</td>
-                        <!-- <td data-label="Date Modified">9/13/2022</td>
-                        <td data-label="Type">PDF</td> -->
-                        <td data-label="Size"><a href="{{f.link}}" target="_blank">Open</a></td>
-                        <td data-label="Size"><a href="{{f.link}}" target="_blank">Delete</a></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-            </div> 
-        </div>
+<div class="bionic-container">
+  <div class="padding-container">
+    <div class="bionic-title">  
+      <img
+        class="folder-img-logo"
+        src="../../../assets/images/folder_img.svg"
+        alt=""
+      />
+      <p class="title-files">LIST OF CONVERTED FILES</p>
     </div>
+    <div class="data-container">
+      <div class="data-padding">
+        <div class="title-header">
+          <p class="file-header">File Name</p>
+          <p class="link-header">Link</p>
+        </div>
+        <div class="data-body">   
+          <div class="data-content" *ngFor="let f of files">
+            <div class="file-name">
+              <p data-label="File Name">{{f.filename}}</p>
+            </div>
+            
+            <div class="btns-content"> 
+              <div class="open-btn">
+                <p data-label="Size"><a href="{{f.link}}" target="_blank">Open</a></p>
+    
+              </div>
+    
+              <div class="close-btn">
+                <p data-label="Size"><a href="{{f.link}}" target="_blank">Delete</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
 </div>
+
+
+
+<!-- <div class="c">
+  <div class="bfiles_child_container">
+      <div>
+          <div class="child_div_12" >
+              <table class="tb_title inter_font_b">
+                <tr>
+                  <td>
+                    <img
+                      class="img_folder"
+                      src="../../../assets/images/folder_img.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>
+                    <p class="fold_title">LIST OF CONVERTED FILES</p>
+                  </td>
+                </tr>
+              </table>
+      </div>
+      <div class="child_content">
+          <div class="child_div_2">
+            <table>
+              <thead style="position:sticky; top: 0;">
+                <tr class="tr">
+                  <th scope="col">File Name</th>
+                  
+                  <th scope="col">Link</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+     
+                <tbody>
+                  <tr class="tr" *ngFor="let f of files">
+                    <td data-label="File Name">{{f.filename}}</td>
+                    
+                    <td data-label="Size"><a href="{{f.link}}" target="_blank">Open</a></td>
+                    <td data-label="Size"><a href="{{f.link}}" target="_blank">Delete</a></td>
+                  </tr>
+
+                </tbody>
+             
+            </table>
+          </div> 
+      </div>
+  </div>
+</div>  -->
+<!-- <td data-label="Date Modified">9/13/2022</td>
+                      <td data-label="Type">PDF</td> -->
+
+                      
