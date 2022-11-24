@@ -9,15 +9,14 @@
 
 .main{
     height: 100%;
-width: 100%;    
-background: black;
+    width: 100%;    
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
-
+    padding: 0.5rem 1.3rem 5rem;
 }
-
 
 .container{
     width: 500px;
@@ -67,4 +66,13 @@ textarea{
     background: rgba(255, 255, 255, 1);
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 769px){ 
+    .main { 
+
+        .container { 
+            height: 350px;
+        }
+    }
 }

@@ -1,3 +1,224 @@
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// updated css 
+.convert-container { 
+  @include flexCenter();
+  box-sizing: border-box;
+  padding: 3rem;
+  color: #fff;
+  max-width: 730px;
+  margin: 2% auto;
+
+  .mat-progress-bar {
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .convert-container-2 {
+    .title-container{ 
+      @include flexCenter();
+      flex-direction: row;
+      padding-right: 5rem; 
+      padding-bottom: 1.5rem;
+      
+      img { 
+        transform: scale(1); 
+      }
+
+      // text 
+      p {
+        margin: auto; 
+        text-align: center;
+        font-size: 2.3rem;
+        transition: all 1s ease-in;
+      }
+    }
+
+    .btns-convert { 
+      @include flexCenter();
+      padding-top: 2rem;
+    }
+   
+  }
+
+  .drop-file-container { 
+    @include flexCenter(); 
+    background-color: #312D2D;
+    height: 322px;
+    width: 730px;
+    max-height: 100%;
+    border-radius: 15px;
+    margin: auto;
+
+
+    .drag-text {
+      font-size: 1.5rem;
+      padding-bottom: 1.6rem;
+    }
+
+    .file-input { 
+      @include flexCenter(); 
+      padding-bottom: 2.3rem;
+
+      input { 
+        padding: 0 auto;
+        background-color: #F37C0E;
+      }
+    }
+
+    .lower-text {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+   
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .convert-container {
+    
+    .convert-container-2 {
+      
+      .title-container { 
+
+        img { 
+          transform: scale(0.7);
+          padding-right: 10px;
+        }
+        
+        p { 
+          font-size: 1.7rem;
+          line-height: 1.3;
+        }  
+      }  
+
+      .btns-convert{
+      
+        button { 
+          width: 100%;
+        }
+      }
+    }
+
+    .drop-file-container{
+        width: 100%;
+    }
+
+    .lower-text {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 527px) {
+  .convert-container {
+
+    .convert-container-2 {
+
+      .title-container {
+        display: block;
+        padding-right: 0; 
+        padding-bottom: 0.5rem;
+
+        p{
+          text-align: left;
+          line-height: 1.2;
+          padding-left: 20px;
+          font-size: 1.3rem;
+        }
+      }
+
+      .btns-convert{
+
+        button { 
+          width: 100%;
+        }
+      }
+    }
+    
+    .drop-file-container{
+      .drop-container {
+        padding: 0 15px;
+        
+        .drag-text {
+          text-align: left;        
+        }
+
+        .lower-text { 
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 376px) {
+  .convert-container {
+    .convert-container-2 {
+
+      .title-container {
+        display: block;
+        padding: auto 0 0.5rem 15px;
+
+
+        p{
+          text-align: left;
+          font-size: 1.3rem;
+          padding-left: 20px;
+        }
+      }
+      
+      .btns-convert{
+
+        button { 
+          width: 80%;
+        }
+      }
+    }
+    
+    .drop-file-container{
+      width: 85%;
+
+      .drop-container {
+        width: 90%;
+        
+        .file-input input{
+          margin: 0 10px;
+          width: 170px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// old code 
+
 .bfiles_child_container{
   height: 322px;
   width: 730px;

@@ -1,5 +1,46 @@
-<div class="bfiles_container">
 
+ <div class="convert-container">
+  <mat-progress-bar mode="indeterminate" [hidden]="hide"></mat-progress-bar>
+  <div class="convert-container-2">
+    <div class="title-container">  
+      <img
+        src="../../../assets/images/folder_img.svg"
+        alt=""
+      />    
+      <p>UPLOAD FILES</p>     
+    </div>
+
+    <div class="drop-file-container">
+      <div class="drop-container">
+        <p class="drag-text">Drag and drop your files here or</p>
+        
+        <div class="file-input">
+          <input 
+            class="input-file"
+            type="file"
+            id="file"
+            (change)="handleFileInput($event)"
+          />
+        </div>    
+       <p class="lower-text">
+          Supported file formats are pdf, docx, rtf
+        </p>                
+      </div>  
+    </div>      
+
+    <div class="btns-convert">
+      <button class="convert_btn" [hidden]="!openURLHide" mat-raised-button (click)="upload()" >CONVERT</button>
+
+      <button class="convert_btn" *ngIf="openURL" mat-raised-button (click)="openLink()" >OPEN CONVERTED</button>
+    </div>
+
+   
+  </div>
+</div>
+
+
+<!--  
+ <div class="bfiles_container">
   <div class="bfiles_child_container">
     <mat-progress-bar mode="indeterminate" [hidden]="hide"></mat-progress-bar>
       <div>
@@ -47,24 +88,15 @@
                     </td>
                   </tr>
                  
-                  
-
-               </table>
-               
+               </table>            
           </div>
-        </div> 
-        
-         
+        </div>      
         <div class="child_div_3">
           <button class="convert_btn" [hidden]="!openURLHide" mat-raised-button (click)="upload()" >CONVERT</button>
           <br>
           <br>
           <button class="convert_btn" *ngIf="openURL" mat-raised-button (click)="openLink()" >OPEN CONVERTED</button>
         </div>
-      
-        <!--  -->
-
-
       </div>
   </div>
-</div>
+</div>   -->

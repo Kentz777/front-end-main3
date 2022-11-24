@@ -4,7 +4,7 @@ ul {
 }
 .footer-section {
   background: #151414;
-  position: relative;
+  position: relative; 
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
@@ -157,4 +157,16 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+@media only screen and (max-width: 600px) {
+  .footer-section{ 
+    padding-right: 30px !important; 
+    margin-top: 30%;
+  }
+}
+
+@media only screen and (max-width: 1079px) { 
+  .footer-section { 
+    padding: 0 90px;
+  }
 }

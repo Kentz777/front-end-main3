@@ -1,10 +1,357 @@
-.bfiles_child_container{
+// style css 
+// search -> breakpoints to directly check the 
+// code for different screen sizes
+
+
+// flex center column
+@mixin flexboxCenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+// flex center row
+@mixin flexboxCenterRow(){
+  @include flexboxCenter(); // use @include [name func]
+  flex-direction: row;
+}
+ 
+ 
+ // top level container
+.bionic-container { 
+  color: #fff; 
+  @include flexboxCenter();
+
+  // second container for padding
+  .padding-container{ 
+    margin: 2rem; 
+    width: 100%; 
+    max-width: 650px;
+
+    // title container
+    .bionic-title {
+      @include flexboxCenterRow(); 
+      justify-content: flex-start;
+      padding: 2rem 2rem 3rem;
+
+      // folder logo container
+      .folder-img-logo {
+        transform: scale(1);
+        margin-right: 2rem;
+      }
+
+      // title 
+      .title-files {
+        font-size: 2rem; 
+      }
+    }
+
+    // data or content container 
+    .data-container { 
+
+      // data container for padding
+      .data-padding {
+
+        // title container 
+        .title-header { 
+          @include flexboxCenterRow(); 
+          justify-content: space-between;
+          background-color: #F37C0E;
+          padding: 0.5rem 0.3rem 0; 
+          
+          // File name & file link
+          
+          .file-header { 
+            margin-left: 2%;
+          }
+
+          .link-header {
+            margin-right: 15%;
+          }
+        }
+          // data body 
+        .data-body {
+          height: 450px;
+          overflow-y: scroll;
+
+          // content 
+          .data-content { 
+            @include flexboxCenterRow();
+            justify-content: space-between;
+            background: #312D2D;
+            position: relative;
+            color: white;
+            padding: 0.5rem;
+            
+            .file-name { 
+              p {
+                padding: 0.5rem;
+              }
+            }
+
+            .btns-content {
+              @include flexboxCenterRow();
+              justify-content: space-between;
+              width: 130px;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// breakpoints 
+@media screen and (max-width: 992px) { 
+  .bionic-container {
+    
+    .padding-container {
+      width: 600px;
+      max-width: 100%;
+
+      .bionic-title {
+
+        .title-files {
+
+        }
+      }
+
+      .data-container {
+
+        .data-padding {
+          
+          .title-header {
+            
+            .link-header {
+              margin-right: 16%;
+            }
+          }
+
+          .data-body { 
+            height: 350px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 710px){ 
+  .bionic-container {
+    
+    .padding-container {
+      width: 400px;
+      max-width: 100%;
+
+      .bionic-title {
+        display: block;
+        padding: 2rem 1.5rem 2rem 0;
+
+        .folder-img-logo {
+          transform: scale(0.7);
+        }
+
+        .title-files {
+          font-size: 1.5rem;
+          padding-top: 10px; 
+          padding-bottom: 0;
+          margin-bottom: 0;
+          line-height: 1.2;
+        }
+      }
+
+      .data-container {
+
+        .data-padding {
+          
+          .title-header {
+            
+            .link-header {
+              margin-right: 22%;
+            }
+          }
+
+          .data-body { 
+            height: 350px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// for phones
+
+@media screen and (max-width: 486px) {
+  .bionic-container {
+    
+    .padding-container {
+      width: 300px;
+      max-width: 100%;
+
+      .bionic-title {
+        display: block;
+        padding: 2rem 1.5rem 2rem 0;
+
+        .folder-img-logo {
+          transform: scale(0.7);
+        }
+
+        .title-files {
+          font-size: 1.5rem;
+          padding-top: 5px; 
+          padding-left: 15px;
+          line-height: 1.2;
+        }
+      }
+
+      .data-container {
+
+        .data-padding {
+          
+          .title-header {
+            
+            .file-header {
+              margin-left: 4%;
+            }
+
+            .link-header {
+              margin-right: 26%;
+            }
+          }
+
+          .data-body { 
+            height: 600px;
+            
+            .data-content{
+              justify-content: space-around;
+              
+              .file-name {
+                padding-right: 0.6rem;
+              }
+
+              .btns-content { 
+                width: 50vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .bionic-container {
+    
+    .padding-container {
+      width: 220px;
+      max-width: 100%;
+
+      .bionic-title {
+        display: block;
+        padding: 2rem 1.5rem 2rem 0;
+
+        .folder-img-logo {
+          transform: scale(0.7);
+        }
+
+        .title-files {
+          font-size: 1.3rem;
+          padding-top: 5px; 
+          padding-left: 15px;
+          line-height: 1.2;
+        }
+      }
+
+      .data-container {
+
+        .data-padding {
+          padding: 0.3rem;
+
+          .title-header {
+            
+            .file-header {
+              margin-left: 4%;
+            }
+
+            .link-header {
+              margin-right: 13%;
+            }
+          }
+
+          .data-body { 
+            height: 600px;
+
+            .data-content{
+
+              .file-name {
+                width: 120px;
+                padding-right: 2px;
+                word-break: break-all;
+                
+                p {
+                  padding-left: 0;
+          
+                }
+              }
+
+              .btns-content { 
+                width: 15vw;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bfiles_child_container:only-child{
     height: 322px;
     width: 730px;
     left: 27%;
     margin-top: 3%;
     position: relative;
     color: white;
+    padding-bottom: 50%;
+
 }
 
 .child_content{
@@ -16,7 +363,6 @@
     margin-top: 2%;
     color: white;
 }
-
 
 .inter_font_b{
     font-size: 40px;
